@@ -1,5 +1,5 @@
 body{
-	display: grid;
+	display: grid;	
 }
 
 #addbtn{
@@ -14,8 +14,6 @@ body{
 }
 
 #totalbuyprice{
-	position: relative;
-	margin-left: 1250px;
 }
 
 .robocontainer {
@@ -27,7 +25,7 @@ body{
 
 .roboitem{
 	padding: 10px;
-	/*flex-grow: 1;*/
+	flex-grow: 1;
 }
 
 .trashbtn{

@@ -2,7 +2,7 @@ $("#addbtn").click(roboclone);
 $(".trashbtn").click(robodelete);
 $("#submitbtn").click(robosubmit);
 $(".robocontainer").toggle();
-$(".buyitem").onchange = sumbuyprice();
+$(".buyitem").change(sumbuyprice);
 
 
 //names of input objects
@@ -18,6 +18,23 @@ var namesofselectobjects = {
 	quantity : "quantity",
 	condition : "condition"
 }
+
+
+//Disable enter key from submitting form when entering text
+$(document).on('keyup keypress', 'form input[type="text"]', function(e) {
+  if(e.which == 13) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+//Disable enter key from submitting form when entering numbers
+$(document).on('keyup keypress', 'form input[type="number"]', function(e) {
+  if(e.which == 13) {
+    e.preventDefault();
+    return false;
+  }
+});
 
 //click the add button once, to create the first card element
 $("#addbtn").click();
@@ -64,6 +81,9 @@ function robosubmit() {
 }
 
 function sumbuyprice() {
-	var buypricelist = document.getElementsByClassName("buyitem");
-	console.log(buypricelist[0]);
+	var total = 0;
+	// $(".buyitem").each(function(){
+	// 	total += parseFloat($(this).val());
+	// });
+	console.log(total);
 }
