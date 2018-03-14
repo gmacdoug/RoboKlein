@@ -9,13 +9,13 @@ $(".buyitem").change(sumbuyprice);
 var namesofinputobjects = {
 	cardname : "cardname",
 	buyprice : "buyprice",
+	quantity : "quantity",
 	autolist : "autolist"
 }
 
 //names of select objects
 var namesofselectobjects = {
 	expansion : "expansion",
-	quantity : "quantity",
 	condition : "condition"
 }
 
@@ -82,8 +82,9 @@ function robosubmit() {
 
 function sumbuyprice() {
 	var total = 0;
-	// $(".buyitem").each(function(){
-	// 	total += parseFloat($(this).val());
-	// });
-	console.log(total);
+	$(".buyitem").each(function(){
+		total += parseFloat($(this).val());
+	});
+	var rounded = Math.ceil(total * 100)/100;
+	$(".totalbuyitem").val(rounded);
 }

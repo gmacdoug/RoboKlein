@@ -14,6 +14,7 @@ body{
 }
 
 #totalbuyprice{
+	margin-left: 15px;
 }
 
 .robocontainer {
@@ -26,6 +27,11 @@ body{
 .roboitem{
 	padding: 10px;
 	flex-grow: 1;
+}
+
+.quantityitem{
+	max-width: 50px;
+	padding-left: 15px;
 }
 
 .trashbtn{
