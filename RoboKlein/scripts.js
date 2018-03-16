@@ -76,6 +76,7 @@ function robodelete (){
 
 function robosubmit() {
 	if (confirm("Purchase?")){
+		$("#sellerinfo").clone(true, true).appendTo($("#roboform"));
 		document.getElementById("roboform").submit();
 	}
 }
